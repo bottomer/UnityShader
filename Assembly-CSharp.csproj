@@ -50,6 +50,7 @@
      <None Include="Assets\[001]_PBR_StepByStep\Shaders\001_PBR_StepByStep_004_Phong.shader" />
      <None Include="Assets\[001]_PBR_StepByStep\Shaders\001_PBR_StepByStep_002_Blinn-Phong.shader" />
      <None Include="Assets\[001]_PBR_StepByStep\Shaders\001_PBR_StepByStep_005_Cook-Torrance.shader" />
+     <None Include="Assets\[001]_PBR_StepByStep\Shaders\001_PBR_StepByStep_006_InnerLit.shader" />
      <None Include="Assets\[001]_PBR_StepByStep\Shaders\001_PBR_StepByStep_003_Normalized-Phong.shader" />
      <None Include="Assets\[001]_PBR_StepByStep\Shaders\PBR_StepByStep.cginc" />
      <None Include="Assets\[001]_PBR_StepByStep\Shaders\001_PBR_StepByStep_001_Lambert.shader" />

@@ -1,4 +1,4 @@
-﻿Shader "001_PBR_StepByStep/002_Blinn_Phong"
+﻿Shader "001_PBR_StepByStep/006_InnerLit"
 {
 	Properties
 	{
@@ -41,13 +41,14 @@
 				float3 nor : TEXCOORD2;
 			};
 
+
 			uniform half4 _LightColor0;
 			sampler2D _MainTex;
 			float4 _MainTex_ST;
 			fixed4 _Color;
+			float _m;
 			float _kd;
 			float _ks;
-			float _m;
 			
 			v2f vert (appdata v)
 			{
@@ -63,10 +64,10 @@
 				fixed4 col = tex2D(_MainTex, i.uv) * _Color;
 				fixed3 ambient = UNITY_LIGHTMODEL_AMBIENT.rgb;
 				_BASE_VECTOR_FRAG
-				//lambert diffuse
-				col.rgb *= _kd * (max(0, NL) * _LightColor0.rgb + ambient);
-				//blinn-phong specular
-				col.rgb += _ks * _LightColor0.rgb * pow(max(0, NH), _m);
+
+				float3 light = lit(NL, NH, _m);
+				col.rgb = col.rgb * _kd * (_LightColor0.rgb * light.y + ambient * light.x) +  _ks * _LightColor0.rgb * light.z;
+
 				return saturate(col);
 			}
 			ENDCG
