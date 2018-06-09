@@ -4,6 +4,8 @@
 	{
 		_Color ("Color", Color) = (1, 1, 1, 1)
 		_MainTex ("Texture", 2D) = "white" {}
+		_kd ("Widegt of Diffuse", Range(0,1)) = 0.5
+		_ks ("Widegt of Specular", Range(0,1)) = 0.5
 		_m ("Glossnesss", Float) = 20
 	}
 	SubShader
@@ -43,6 +45,8 @@
 			sampler2D _MainTex;
 			float4 _MainTex_ST;
 			fixed4 _Color;
+			float _kd;
+			float _ks;
 			float _m;
 			
 			v2f vert (appdata v)
@@ -60,9 +64,9 @@
 				fixed3 ambient = UNITY_LIGHTMODEL_AMBIENT.rgb;
 				_BASE_VECTOR_FRAG
 				//lambert diffuse
-				col.rgb *= max(0, NL) * _LightColor0.rgb + ambient;
+				col.rgb *= _kd * (max(0, NL) * _LightColor0.rgb + ambient);
 				//blinn-phong specular
-				col.rgb += _LightColor0.rgb * pow(max(0, NH), _m);
+				col.rgb += _ks * _LightColor0.rgb * pow(max(0, NH), _m);
 				return saturate(col);
 			}
 			ENDCG
