@@ -14,7 +14,8 @@
 	o.pos = v.vertex; \
 	o.nor = v.normal;
 
-#define PI 3.1415962653
+//use UNITY_PI
+//#define PI 3.1415962653
 
 #define _BASE_VECTOR_FRAG \
 	float4 wPos = mul(unity_ObjectToWorld, i.pos); \
@@ -29,4 +30,5 @@
 	float NL = dot(N, L); \
 	float NV = dot(N, V); \
 	float NH = dot(N, H); \
-	float VR = dot(V, R);
+	float VR = dot(V, R); \
+	float VH = dot(V, H); 

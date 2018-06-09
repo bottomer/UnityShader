@@ -64,7 +64,7 @@
 				//https://zhuanlan.zhihu.com/p/37639418
 				col.rgb *= max(0, NL) * _LightColor0.rgb + ambient;
 				//normalized specular
-				col.rgb += _LightColor0.rgb * pow(max(0, NH), _m) * max(0, NL) * (_m + 8) / 8 / PI;
+				col.rgb += _LightColor0.rgb * pow(max(0, NH), _m) * max(0, NL) * (_m + 8) / 8 / UNITY_PI;
 				return saturate(col);
 			}
 			ENDCG
