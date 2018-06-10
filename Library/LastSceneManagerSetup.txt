@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/[001]_PBR_StepByStep/001_Scene.unity
+  isLoaded: 1
+  isActive: 1

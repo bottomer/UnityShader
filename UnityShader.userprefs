@@ -1,12 +1,8 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/_Project/Scripts/Common/Editor/SimpleTableEditor.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/[001]_PBR_StepByStep/Shaders/001_PBR_StepByStep_006_InnerLit.shader">
     <Files>
-      <File FileName="Assets/[001]_PBR_StepByStep/Shaders/001_PBR_StepByStep_001_Base.shader" Line="58" Column="52" />
-      <File FileName="Assets/[001]_PBR_StepByStep/Shaders/PBR_StepByStep.cginc" Line="23" Column="42" />
-      <File FileName="Assets/_Project/Scripts/Common/SimpleTable.cs" Line="32" Column="1" />
-      <File FileName="Assets/_Project/Scripts/Common/Editor/SimpleTable1.cs" Line="1" Column="1" />
-      <File FileName="Assets/_Project/Scripts/Common/Editor/SimpleTableEditor.cs" Line="1" Column="1" />
+      <File FileName="Assets/[001]_PBR_StepByStep/Shaders/001_PBR_StepByStep_006_InnerLit.shader" Line="69" Column="116" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
